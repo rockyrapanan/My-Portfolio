@@ -4,10 +4,10 @@ import Navbar from './components/Navbar';
 import Resume from './pages/Resume'; 
 import About from './pages/About';
 import Projects from './pages/Projects';
-import backgroundImage from './images/software_Engineer.jpg';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <>
       <Navbar />
@@ -19,7 +19,7 @@ function App() {
             <section
               className="hero-section"
               style={{
-                backgroundImage: `url(${backgroundImage})`,
+                backgroundImage: `url('/background.jpg')`, // ✅ direct public path (replace with your image file name)
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -47,7 +47,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;
-
